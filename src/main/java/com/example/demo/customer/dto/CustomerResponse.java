@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 import java.time.Instant;
 
 public record CustomerResponse (
-        Long id, String name, String email, BigDecimal createLimit, Instant createAt
+        Long id, String name, String email, BigDecimal creditLimit, Instant createdAt
 ) {
     public static CustomerResponse from (Customer c) {
         return new CustomerResponse(c.getId(), c.getName(), c.getEmail(), c.getCreditLimit(), c.getCreatedAt());
